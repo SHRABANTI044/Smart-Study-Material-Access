@@ -23,7 +23,7 @@ const Dashboard = () => {
           <h1>SMART STUDY MATERIAL ACCESS</h1>
         </header>
         <section className="welcome-section">
-          <h2>Welcome, bwubta24191@brainwareuniversity.ac.in <span role="img" aria-label="waving hand">👋</span></h2>
+          <h2>Welcome <span role="img" aria-label="waving hand">👋</span></h2>
         </section>
         <section className="cards-grid">
           <div className="card attendance-card">
@@ -116,3 +116,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
