@@ -1,0 +1,594 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.header {
+  background-color: #5a6ea0;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  user-select: none;
+  margin-bottom: 15px;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #7a86d6;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.sidebar-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav ul li {
+  padding: 12px 10px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.sidebar-nav ul li.active,
+.sidebar-nav ul li:hover {
+  background-color: #5a63b8;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  background-color: #fafafa;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7a86d6;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+.welcome-section h2 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  flex: 1;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+.card.attendance-card {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.4);
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.attendance-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(37, 117, 252, 0.6);
+}
+
+.card.attendance-card h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  letter-spacing: 1.2px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.card.attendance-card .circle-progress {
+  background: linear-gradient(white, #f0f0f0) padding-box, linear-gradient(45deg, #4caf50, #66bb6a) border-box;
+  border: 5px solid transparent;
+  color: #4caf50;
+}
+
+.card.attendance-card .status, .card.attendance-card .classes, .card.attendance-card .semester {
+  color: #d0f0c0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  font-size: 0.9rem;
+}
+
+.card.exam-score-card {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(250, 112, 154, 0.4);
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.exam-score-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(250, 112, 154, 0.6);
+}
+
+.card.exam-score-card h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  letter-spacing: 1.2px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.card.exam-score-card .cgpa, .card.exam-score-card .percentage, .card.exam-score-card .semester {
+  color: #ffebee;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  font-size: 0.9rem;
+}
+
+.card.study-statistics-card {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(168, 237, 234, 0.4);
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card.study-statistics-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(168, 237, 234, 0.6);
+}
+
+.card.study-goals-card {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(168, 237, 234, 0.4);
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.study-goals-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(168, 237, 234, 0.6);
+}
+
+.card.study-goals-card h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  letter-spacing: 1.2px;
+  color: #333;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  margin-bottom: 8px;
+}
+
+.stat-item span {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 14px;
+  background-color: #f0f0f0;
+  border-radius: 7px;
+  overflow: hidden;
+  margin: 0 10px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  border-radius: 7px 0 0 7px;
+  transition: width 0.3s ease;
+}
+
+.stat-value {
+  font-weight: 700;
+  color: #2e7d32;
+  min-width: 60px;
+  text-align: right;
+  font-size: 0.95rem;
+}
+
+.card.study-statistics-card h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  letter-spacing: 1.2px;
+  color: #333;
+}
+
+.card.study-statistics-card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.card h3 {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.circle-progress {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  background: linear-gradient(white, #f0f0f0) padding-box, linear-gradient(45deg, #ddd, #bbb) border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 auto 8px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle-progress.green {
+  background: linear-gradient(white, #f0f0f0) padding-box, linear-gradient(45deg, #4caf50, #66bb6a) border-box;
+  color: #4caf50;
+}
+
+.circle-progress.red {
+  background: linear-gradient(white, #f0f0f0) padding-box, linear-gradient(45deg, #f44336, #ef5350) border-box;
+  color: #f44336;
+}
+
+.status, .cgpa, .percentage, .semester, .classes {
+  text-align: center;
+  margin: 2px 0;
+  font-weight: 600;
+  color: #4caf50;
+}
+
+.cgpa, .percentage {
+  color: #f44336;
+}
+
+.study-statistics-card p {
+  margin: 5px 0;
+}
+
+.weekly-hours {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.weekly-hours div {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  min-width: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.weekly-hours div:hover {
+  transform: scale(1.05);
+}
+
+.study-goals-card .goal {
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 5px 0 8px;
+}
+
+.progress-bar .progress {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 6px 0 0 6px;
+}
+
+.upcoming-deadlines-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.upcoming-deadlines-card li {
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #333;
+}
+
+.upcoming-deadlines-card li.urgent {
+  background-color: #ffe6e6;
+  border-left: 5px solid #f44336;
+  color: #f44336;
+}
+
+.upcoming-deadlines-card li small {
+  margin-left: auto;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666;
+}
+
+.course-progress-card .course {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.course-progress-card progress {
+  width: 60%;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  appearance: none;
+}
+
+.course-progress-card progress::-webkit-progress-bar {
+  background-color: #ddd;
+  border-radius: 6px;
+}
+
+.course-progress-card progress::-webkit-progress-value {
+  background-color: #4caf50;
+  border-radius: 6px;
+}
+
+.grade-trends-card p {
+  background: linear-gradient(90deg, #e3f2fd, #f3e5f5);
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 6px 0;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card.course-progress-card {
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.course-progress-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card.grade-trends-card {
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.grade-trends-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* StudyStatisticsChart styles */
+
+.study-statistics-card {
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chart-header h3 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.view-toggle button {
+  background-color: #e0f2f1;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #00796b;
+  transition: background-color 0.3s ease;
+}
+
+.view-toggle button.active,
+.view-toggle button:hover {
+  background-color: #00796b;
+  color: white;
+}
+
+.bar-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 150px;
+  padding: 0 5px;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30px;
+}
+
+.bar-label-hours {
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+  color: #00796b;
+  font-weight: 600;
+}
+
+.bar {
+  width: 100%;
+  background: linear-gradient(180deg, #a5d6a7, #388e3c);
+  border-radius: 4px 4px 0 0;
+  transition: background 0.3s ease;
+}
+
+.bar:hover {
+  background: linear-gradient(180deg, #81c784, #2e7d32);
+}
+
+.bar-label {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #004d40;
+  font-weight: 600;
+}
+
+.circle-progress:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Study Statistics Chart Styles */
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.view-toggle button {
+  background: #ddd;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.view-toggle button.active {
+  background: #007bff;
+  color: white;
+}
+
+.bar-chart {
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  align-items: end;
+  margin-top: 10px;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.bar {
+  width: 30px;
+  background: linear-gradient(to top, #007bff, #3399ff);
+  border-radius: 5px 5px 0 0;
+  transition: height 0.3s ease;
+  position: relative;
+}
+
+.bar.current {
+  background: linear-gradient(to top, #ff9800, #ffb74d);
+}
+
+.bar-label {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+.bar-label-hours {
+  background-color: #4caf50;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  user-select: none;
+}
+
+
+
+
